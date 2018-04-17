@@ -8,22 +8,14 @@ int main_07()
 {
 	setlocale(LC_ALL, "Russian");
 
-	//исходная строка:
 	char* text = new char[250];
-
-	//длина исходной строки:
 	int text_len;
-
-	//подстрока:
 	char* templ = new char[250];
-
-	//длина искомой строки:
 	int templ_len;
 
 	int action_ch;
-
-	bool go_text = false;//сигнал о том, введена ли исх. строка
-	bool go_templ = false;//сигнал о том, введён ли шаблон
+	bool go_text = false;
+	bool go_templ = false;
 
 	do
 	{
@@ -48,7 +40,6 @@ int main_07()
 			cout << "enter the original string: ";
 			cin >> text;
 
-			//длина исходной строки:
 			text_len = strlen(text);
 			cout << "length of input string: " << text_len << endl;
 			cout << endl;
@@ -67,7 +58,7 @@ int main_07()
 			cout << "length of input string: " << str_len << endl;
 			cout << endl;
 
-			cout << endl;//переход на новую строку
+			cout << endl;
 			system("pause");
 			break;
 		}
