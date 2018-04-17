@@ -24,8 +24,8 @@ int main_04()
 
 	int action_ch;
 
-	bool go_arr = false;//сигнал о том, что сгенерирован массив
-	bool go_sort = false;//сигнал о том, что выполнена сортировка
+	bool go_arr = false;
+	bool go_sort = false;
 
 	do
 	{
@@ -48,7 +48,7 @@ int main_04()
 			go_arr = true;
 
 			cout << "Enter the size of array: ";
-			cin >> quant;//ввод размера
+			cin >> quant;
 			Arr = new int[quant];
 
 			RandomValuesHeap(quant, Arr);
