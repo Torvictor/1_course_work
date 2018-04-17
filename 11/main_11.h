@@ -3,7 +3,7 @@
 
 using namespace std;
 
-/ * ------------------------------------------------ -------------------------------------------------- ----- *
+/* ------------------------------------------------ -------------------------------------------------- ----- *
 Assignment: implementation of the algorithm of the sorting station (reverse Polish recording).
 | ------------------------------------------------- -------------------------------------------------- ------
 Assignment main_11.h: demonstration of the program (testing algorithm of the station).
@@ -15,7 +15,7 @@ Assignment main_11.h: demonstration of the program (testing algorithm of the sta
 | `function to identify the priority of a given arithmetic operation.
 | ------------------------------------------------- -------------------------------------------------- ------
 Proto.h: prototyping functions.
-* ------------------------------------------------- -------------------------------------------------- ---- * /
+* ------------------------------------------------- -------------------------------------------------- ---- */
 int main_11()
 {
 	setlocale(LC_ALL, "Russian");
@@ -28,8 +28,8 @@ int main_11()
 	char* OutStr = new char[outstr_len];
 
 	int action_ch;
-	bool go_infix = false;//сигнал о том, введена ли инфиксная запись
-	bool go_polish = false;//сигнла о том, что запись переведена
+	bool go_infix = false;
+	bool go_polish = false;
 
 	do
 	{
