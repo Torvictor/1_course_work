@@ -20,8 +20,8 @@ int main_03()
 	int quant;
 	int *Arr = NULL;
 	int action_ch;
-	bool go_arr = false;//сигнал о том, что сгенерирован массив
-	bool go_sort = false;//сигнал о том, что выполнена сортировка
+	bool go_arr = false;
+	bool go_sort = false;
 
 	do
 	{
