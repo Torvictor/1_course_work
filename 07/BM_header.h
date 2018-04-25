@@ -17,11 +17,8 @@ int *CreateSuffixTable(char *templ, int templ_len);
 
 int FindPosBM(char *templ, int templ_len, char symbol);
 
-/ * construction of the table of the most right occurrences
+/*construction of the table of the most right occurrences
 characters of the alphabet (consisting of Latin letters,
 arabic numerals, partitions and white space):
-* /
+*/
 int *CreateStopTable(char *templ, int templ_len);
-
-
-
