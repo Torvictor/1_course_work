@@ -9,11 +9,11 @@ void PrintArrayRK(int *Arr, int size)
 	cout << endl;
 }
 
-/ *
+/*
 hash function:
 `based on the received integer" ASCII "codes from the template symbols
 gives the obtained value in the 100th number system.
-* /
+*/
 unsigned long int HashFunc(char* templ, int templ_len, int* Code)
 {
 	for (int i = 0; i < templ_len; i++)
@@ -42,10 +42,10 @@ unsigned long int HashFunc(char* templ, int templ_len, int* Code)
 // recalculation of the hash function:
 unsigned long int HashRecalculation(int templ_len, unsigned long int hash_value, int del_symb, int add_symb)
 {
-	/ *
+	/*
 	add the current hash value
 	the code "ASCII" of the symbol added to 100 SS:
-	* /
+	*/
 	hash_value = hash_value * 100 + add_symb;
 
 	// then subtract the "ASCII" code of the old character in 100 SS:
@@ -54,10 +54,10 @@ unsigned long int HashRecalculation(int templ_len, unsigned long int hash_value,
 	return hash_value;
 }
 
-/ *
+/*
 for the given start_pos function extracts the required substring from the text:
 (start_pos is the position with which the substring is requested from the text!)
-* /
+*/
 char* TakeSubText(int start_pos, int templ_len, char* text)
 {
 	char* subtext = new char[templ_len];
@@ -75,7 +75,7 @@ char* TakeSubText(int start_pos, int templ_len, char* text)
 	return subtext;
 }
 
-/ *
+/*
 Search for Rabin-Karp.
 Function parameters:
 `text - source text
@@ -85,7 +85,7 @@ Function parameters:
 `hash_templ - the result of the hash function for the template
 `Result - record the result of work of this function (entries of entries)
 `size - the size of the array Result.
-* /
+*/
 int RabinKarp_Search(char* text, int text_len, char* templ, int templ_len, unsigned long int hash_templ, int* Result, int size)
 {
 	int i = 0;//steps on the text
@@ -103,10 +103,10 @@ int RabinKarp_Search(char* text, int text_len, char* templ, int templ_len, unsig
 
 	while (i < text_len)
 	{
-		/ *
+		/*
 		if the hash value of the taken substring from the text
 		matches the value of the template hash function:
-		* /
+		*/
 		if (hash_subtext == hash_templ)
 		{
 			j = 0; // get to the starting position in the template
@@ -142,20 +142,20 @@ int RabinKarp_Search(char* text, int text_len, char* templ, int templ_len, unsig
 		// if no entries were found:
 		if (flag == false)
 		{
-			/ *
+			/*
 			consider the code of the first character from the taken substring:
 			(which will be subtracted from the value below
 			hash function of the next substring)
-			* /
+			*/
 			del_symb = (int)subtext[0];
 
 			subtext = TakeSubText(i, templ_len, text);
 
-			/ *
+			/*
 			consider the code of the last character from the new one
 			substring (which will be processed by the hash function
 			and added to the hash value of this substring):
-			* /
+			*/
 			add_symb = (int)subtext[templ_len - 1];
 
 			hash_subtext = HashRecalculation(templ_len, hash_subtext, del_symb, add_symb);
