@@ -24,7 +24,6 @@ int RadixOfValue(int val)
 		count++;
 		val = val / 10;
 	}
-	//количество цифр в числе:
 	return count;
 }
 
@@ -93,8 +92,6 @@ void RadixSort(int *Arr, int quant)
 			Arr[n] = SortArr[n];
 			SortArr[n] = change;
 		}
-
-		//домножаем данные значения на 10 (для формулы (*)):
 		mod = mod * 10;
 		div = div * 10;
 	}
