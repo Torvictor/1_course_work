@@ -23,12 +23,12 @@ int BMsearch(char *text, char *templ, int text_len, int templ_len, int *Result)
 		if (tmsuff_len == templ_len)											
 		{
 			Result[size] = i - templ_len + 2;
-			i++;//сдвиг вперёд
-			size++;та
+			i++;
+			size++;ГІГ 
 		}
 		else																
 		{
-			int step = y - StopTab[text[x] - 32];//текуший шаг
+			int step = y - StopTab[text[x] - 32];
 
 			if (step > SuffTab[tmsuff_len])								
 			{
@@ -51,11 +51,11 @@ void PrintArrBM(int *Arr, int size)
 	}
 }
 
-/ *
+/*
 create a suffix-table of shifts
 (calculation of all possible shifts of the template
 for all possible suffixes):
-* /
+*/
 int *CreateSuffixTable(char *templ, int templ_len)
 {
 	int *SuffTab = new int[templ_len + 1];
@@ -97,9 +97,9 @@ int *CreateSuffixTable(char *templ, int templ_len)
 	return SuffTab;
 }
 
-/ * search for the rightmost position
+/*search for the rightmost position
 A non-matched character in the template:
-* /
+*/
 int FindPosBM(char *templ, int templ_len, char symbol)
 {
 	int pos = 0;
@@ -123,7 +123,7 @@ int *CreateStopTable(char *templ, int templ_len)
 {
 	int *StopTab = new int[95];
 
-	// search for the right occurrence of each of the alphabet characters:
+	//search for the right occurrence of each of the alphabet characters:
 	for (char symbol = 32; symbol < 127; symbol++)									
 	{
 		StopTab[symbol - 32] = FindPosBM(templ, templ_len, symbol);					
