@@ -69,7 +69,6 @@ void PushToStack(Stack<T> **begin, const T &add_el)
 template<class T>
 void PopFromStack(Stack<T> **b)
 {
-	//если список пуст:
 	if (*b == NULL)
 	{
 		return;
