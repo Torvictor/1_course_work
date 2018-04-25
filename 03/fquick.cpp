@@ -31,7 +31,7 @@ void ExchangeOfElementsQ(int i, int j, int *Arr)
 
 void RecursionForSubarrays(int begin, int end, int low_lim, int high_lim, int *Arr)
 {
-	if (low_lim < end)//левая часть
+	if (low_lim < end)
 	{
 		QuickSort(low_lim, end, Arr);
 	}
