@@ -196,7 +196,7 @@ void DemonstrationOfQueue()
 	}
 	default:
 	{
-		cout << "Ошибочный тип...\n";
+		cout << "Default...\n";
 		break;
 	}
 	}
