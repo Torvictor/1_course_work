@@ -43,12 +43,12 @@ int PriorOfSigns(char sign)
 	}
 }
 
-/ * function converts the original string into a reverse Polish entry:
+/*function converts the original string into a reverse Polish entry:
 InStr - input string;
 OutStr - result (output) line;
 outstr_len - the size of the output string;
 cur is an element of the type of the StackASY structure for inserting certain characters into the stack.
-* /
+*/
 void ResPolishNote(char* InStr, char* OutStr, int outstr_len, StackASY* cur)
 {
 	cur = NULL;
@@ -86,14 +86,14 @@ void ResPolishNote(char* InStr, char* OutStr, int outstr_len, StackASY* cur)
 
 			else
 
-				/ * if the priority of the received operation is higher
+				/* if the priority of the received operation is higher
 				the operation at the top of the stack:
-				* /
+				*/
 				if (PriorOfSigns(cur->elstack) < PriorOfSigns(InStr[i]))
 				{
 					cur = PushToStackASY(&cur, InStr[i]);
 				}
-				else//else:
+				else
 				{
 					while ((cur != NULL) && (PriorOfSigns(cur->elstack) >= PriorOfSigns(InStr[i])))
 					{
