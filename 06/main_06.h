@@ -19,20 +19,13 @@ int main_06()
 	setlocale(LC_ALL, "Russian");
 	srand(time(NULL));
 
-	//исходная строка:
 	char* text = new char[250];
-
-	//длина исходной строки:
 	int text_len;
 
-	//подстрока:
 	char* str = new char[250];
-
-	//длина искомой строки:
 	int str_len;
 
 	int action_ch;
-
 	bool go_text = false;
 	bool go_templ = false;
 
@@ -107,9 +100,6 @@ int main_06()
 
 			PrintArrayKMP(PrefixArr, common_len);
 			cout << endl;
-
-			cout << "Вывод номер(а/ов) позиций, ";
-			cout << "с которых начинается подстрока в тексте: " << endl;
 
 			KMP_Search(str, str_len, common_len, PrefixArr);
 
