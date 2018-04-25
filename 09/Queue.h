@@ -6,7 +6,7 @@ template<class T>
 struct Queue
 {
 	T qu;
-	Queue *next;а
+	Queue *next;Г 
 	Queue *prev;
 };
 
@@ -114,7 +114,7 @@ void PopFromQueue(Queue<T> **b)
 		*b = del_el->next;
 		(*b)->prev = NULL;
 	}
-	else//иначе:
+	else
 	{
 		*b = del_el;
 		*b = NULL;
