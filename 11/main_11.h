@@ -21,7 +21,6 @@ int main_11()
 	setlocale(LC_ALL, "Russian");
 
 	StackASY *begin = NULL;
-
 	char* InStr = new char[250];
 	
 	int outstr_len = 0;
